@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>1차 자캐 리스트</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="bg-stripe"></div>
+   <!--상단 헤더-->
+    <header id="header">
+      <!--배경변경 스위치 리스트-->
+       <div id="season-switch">
+          <!--실제 눌리는 버튼 리스트-->
+           <input type="button" class="season-btn">
+           <input type="button" class="season-btn">
+           <input type="button" class="season-btn">
+           <input type="button" class="season-btn">
+          <!--버튼 보여주기 명분상의 div-->
+          <div class="season-btn-show"></div>
+       </div>
+       <!--로고-->
+       <div id="logo">
+           <img src="img/profile.svg" alt="logo">
+       </div>
+    </header>
+    <!--중간 컨텐츠 영역-->
+    <div id="contents">
+        <!--정렬 리스트-->
+        <div id="order-list">
+            <input type="button" value="이름▲" class="order-btn">
+            <input type="button" value="나이▲" class="order-btn">
+            <input type="button" value="성별▲" class="order-btn">
+            <input type="button" value="국적▲" class="order-btn">
+        </div>
+        <!--캐릭터 리스트-->
+        <div id="character-list">
+            <div class="character-card">
+               <!--사진-->
+                <div class="character-img">
+                   <img src="img/%ED%95%9C%EC%9A%B0%EB%A6%AC.png" alt="캐릭터 얼굴">
+                </div>
+                <!--기본 프로필-->
+                <div class="character-profile">
+                   <!--이름,성별,나이 부분-->
+                    <div class="profile-up">
+                        <p class="cha-name">한우리</p>
+                        <p class="cha-sex">여</p>
+                        <p class="cha-age">20세</p>
+                    </div>
+                    
+                    <!--성격,컬러 부분-->
+                    <p class="cha-perso">성격: 좋음 / 나쁨 / 이상한</p>
+                    <p class="cha-color">main color : #ffffff</p>
+                    
+                </div>
+                <!--국적-->
+                <div class="character-country">
+                    <p>한국</p>
+                </div>
+            </div>
+            <div class="character-card">
+               <!--사진-->
+                <div class="character-img">
+                   <img src="img/%ED%95%9C%EC%9A%B0%EB%A6%AC.png" alt="캐릭터 얼굴">
+                </div>
+                <!--기본 프로필-->
+                <div class="character-profile">
+                   <!--이름,성별,나이 부분-->
+                    <div class="profile-up">
+                        <p class="cha-name">한우리</p>
+                        <p class="cha-sex">여</p>
+                        <p class="cha-age">20세</p>
+                    </div>
+                    
+                    <!--성격,컬러 부분-->
+                    <p class="cha-perso">성격: 좋음 / 나쁨 / 이상한</p>
+                    <p class="cha-color">main color : #ffffff</p>
+                    
+                </div>
+                <!--국적-->
+                <div class="character-country">
+                    <p>한국</p>
+                </div>
+            </div>
+            
+        </div>
+        <!--top 버튼-->
+        <div id="top">
+        </div>
+    </div>
+    
+    <script>
+        let mainColor = document.querySelector(":root");
+        let seasonBtn = Array.from(document.querySelectorAll('.season-btn'));
+        const seasonBtnShow = document.querySelector('.season-btn-show')
+
+        function changeBgColor(){
+            if(this === seasonBtn[0]){
+                mainColor.style.setProperty('--season-color','#FF9AAE');
+                
+            }else if(this === seasonBtn[1]){
+                mainColor.style.setProperty('--season-color','#80DAF0');
+                
+            }else if(this === seasonBtn[2]){
+                mainColor.style.setProperty('--season-color','#D57160');
+                
+            }else{
+                mainColor.style.setProperty('--season-color','#A2C6DF');
+                
+            }
+            
+            seasonBtnShow.style.left = this.offsetLeft + "px";
+        }
+
+        seasonBtn.forEach(e=>e.addEventListener('click',changeBgColor));
+    </script>
+    
+</body>
+</html>
