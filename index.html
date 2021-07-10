@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1차 자캐 리스트</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+</head>
+<body>
+  <div id="bg-stripe"></div>
+  <div class="snowlist"></div>
+   <!--상단 헤더-->
+    <header id="header">
+      <!--배경변경 스위치 리스트-->
+       <div id="season-switch">
+          <!--실제 눌리는 버튼 리스트-->
+           <button type="button" class="season-btn"><img src="img/spring.svg" alt="spring-icon" ></button>
+           <button type="button" class="season-btn"><img src="img/summer.svg" alt="spring-icon"></button>
+           <button type="button" class="season-btn"><img src="img/autumn.svg" alt="spring-icon"></button>
+           <button type="button" class="season-btn"><img src="img/winter.svg" alt="spring-icon"></button>
+          <!--버튼 보여주기 명분상의 div-->
+          <div class="season-btn-show"></div>
+       </div>
+       <!--로고-->
+       <div id="logo">
+           <img src="img/profile1.png" alt="logo">
+       </div>
+    </header>
+    <!--중간 컨텐츠 영역-->
+    <div id="contents">
+        <!--정렬 리스트-->
+        <div id="order-list">
+            <input type="button" value="이름▲" class="order-btn" data-order="name">
+            <input type="button" value="나이▲" class="order-btn" data-order="age">
+            <input type="button" value="성별▲" class="order-btn" data-order="sex">
+            <input type="button" value="국적▲" class="order-btn" data-order="country">
+        </div>
+        <!--캐릭터 리스트-->
+        <div id="character-list">
+           
+            
+            
+        </div>
+        <!--top 버튼-->
+        <div id="top">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
